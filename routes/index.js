@@ -1,9 +1,13 @@
-const routes = require('express').Router();
-const lesson1Cont = require('../controllers/lesson1');
+// const routes = require('express').Router();
+// const lesson1Cont = require('../controllers/lesson1');
+const express = require('express');
+const router = express.Router();
 
-routes.get('/', (lesson1Cont.briRoute));
-routes.get('/kinsley', (lesson1Cont.kinsleyRoute));
-routes.get('/porter', (lesson1Cont.porterRoute));
-routes.get('/oli', (lesson1Cont.oliRoute));
+// router.get('/', (lesson1Cont.briRoute));
+// router.get('/kinsley', (lesson1Cont.kinsleyRoute));
+// router.get('/porter', (lesson1Cont.porterRoute));
+// router.get('/oli', (lesson1Cont.oliRoute));
 
-module.exports = routes;
+router.use('/contacts', require('./contacts'));
+
+module.exports = router;
