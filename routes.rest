@@ -22,11 +22,12 @@ Content-Type: application/json
 
 PUT  http://localhost:8080/contacts/66342329a1abc6d34c157577 HTTP/1.1
 Content-Type: application/json
+
 {
-     "first_name": "Brianne",
+ "first_name": "Brianne",
   "last_name": "Willis",
   "email": "briwillis@mail.com",
-  "favoriteColor": "PURPLE",
+  "favoriteColor": "Purple",
   "birthday": "9/13/1990"
 }
 

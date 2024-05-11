@@ -26,7 +26,7 @@ const getSingle = async (req, res, next) => {
 const createContact = async (req, res, next) => {
   try {
     const newContact = req.body;
-    console.log('grant', newContact);
+    // console.log('grant', newContact);
     const result = await mongodb
       .getDb()
       .db()
@@ -39,7 +39,26 @@ const createContact = async (req, res, next) => {
   }
 };
 
-const updateContact = async (req, res, next) => {};
+const updateContact = async (req, res, next) => {
+  try {
+    const contactId = new ObjectId(req.params.id);
+    const newData = req.body;
+    console.log('grant', newData);
+
+    const result = await mongodb
+      .getDb()
+      .db()
+      .collection('contacts')
+      .findOneAndUpdate({ _id: contactId }, { $set: newData });
+    if (result.matchedCount === 0) {
+      return res.status(404).json({ message: 'Contact not found' });
+    }
+    res.status(204).json({ message: 'Contact updated succesfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+};
 
 const deleteContact = async (req, res, next) => {};
 module.exports = {
