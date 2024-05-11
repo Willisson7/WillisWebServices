@@ -33,6 +33,7 @@ Content-Type: application/json
 
 ### Delete Contact
 
-DELETE http://localhost:8080/contacts/
+DELETE http://localhost:8080/contacts/663fcccef996eba4c6e81f35
+
 
 ### TODO: ADD DEPLOYED ROUTES FOR SIMPLIFIED TESTING
