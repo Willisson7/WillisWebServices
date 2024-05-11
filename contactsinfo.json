@@ -1,24 +1,23 @@
 [
-    {
-      "first_name": "Brianne",
-      "last_name": "Willis",
-      "email":"briwillis@mail.com",
-      "favoriteColor": "blue",
-      "birthday":"9/13/1990"
-    },
-    {
-        "first_name": "Kinsley",
-        "last_name": "Willis",
-        "email":"kinwillis@mail.com",
-        "favoriteColor": "green",
-        "birthday":"11/15/2001"
-      },
-      {
-        "first_name": "Porter",
-        "last_name": "Willis",
-        "email":"porwillis@mail.com",
-        "favoriteColor": "red",
-        "birthday":"11/16/2005"
-      }
-   
+  {
+    "first_name": "Brianne",
+    "last_name": "Willis",
+    "email": "briwillis@mail.com",
+    "favoriteColor": "blue",
+    "birthday": "9/13/1990"
+  },
+  {
+    "first_name": "Kinsley",
+    "last_name": "Willis",
+    "email": "kinwillis@mail.com",
+    "favoriteColor": "green",
+    "birthday": "11/15/2001"
+  },
+  {
+    "first_name": "Porter",
+    "last_name": "Willis",
+    "email": "porwillis@mail.com",
+    "favoriteColor": "red",
+    "birthday": "11/16/2005"
+  }
 ]

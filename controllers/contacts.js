@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const mongodb = require('../db/connect');
 const contactId = require('mongodb').ObjectId;
 
@@ -22,4 +23,29 @@ const getSingle = async (req, res, next) => {
   });
 };
 
-module.exports = { getAll, getSingle };
+const createContact = async (req, res, next) => {
+  try {
+    const newContact = req.body;
+    console.log('grant', newContact);
+    const result = await mongodb
+      .getDb()
+      .db()
+      .collection('contacts')
+      .insertOne(newContact);
+    res.status(201).json({ id: result.insertedId });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+};
+
+const updateContact = async (req, res, next) => {};
+
+const deleteContact = async (req, res, next) => {};
+module.exports = {
+  getAll,
+  getSingle,
+  createContact,
+  updateContact,
+  deleteContact,
+};
