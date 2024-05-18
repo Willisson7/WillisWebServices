@@ -3,7 +3,7 @@ GET http://localhost:8080/contacts
 
 ### Get contacts by id
 
-GET http://localhost:8080/contacts/66342329a1abc6d34c157577
+GET http://localhost:8080/contacts/66404685e93e451fc792eae5
 
 ### Create Contact
 
@@ -33,7 +33,16 @@ Content-Type: application/json
 
 ### Delete Contact
 
-DELETE http://localhost:8080/contacts/663fcccef996eba4c6e81f35
+DELETE http://localhost:8080/contacts/66404685e93e451fc792eae5
 
 
 ### TODO: ADD DEPLOYED ROUTES FOR SIMPLIFIED TESTING
+
+
+### Get ALL contacts via Render
+GET https://williswebservices.onrender.com/contacts/
+
+
+### Get single contact by id 
+GET https://williswebservices.onrender.com/contacts/66342329a1abc6d34c157577
+
